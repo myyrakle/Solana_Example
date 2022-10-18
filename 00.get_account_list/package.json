@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && npm run start",
+    "start": "node ./dist/src/main.js"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.3.5",
+    "@solana/web3.js": "^1.66.1",
+    "tsc": "^2.0.4",
+    "typescript": "^4.8.4"
+  }
+}
