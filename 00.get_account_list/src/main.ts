@@ -1,13 +1,13 @@
-import { TOKEN_PROGRAM_ID } from "@solana/spl-token";
+import { ASSOCIATED_TOKEN_PROGRAM_ID, TOKEN_PROGRAM_ID } from "@solana/spl-token";
 import { clusterApiUrl, Connection } from "@solana/web3.js";
 
 async function main() {
   const MY_WALLET_ADDRESS = "FriELggez2Dy3phZeHHAdpcoEXkKQVkv6tx3zDtCVP8T";
-  const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
+  const connection =  new Connection(clusterApiUrl("devnet"), "confirmed");
 
   const accounts = await connection.getParsedProgramAccounts(
-    TOKEN_PROGRAM_ID, // new PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA")
-    {
+    ASSOCIATED_TOKEN_PROGRAM_ID, 
+    {  
       filters: [
         {
           dataSize: 165, // number of bytes
